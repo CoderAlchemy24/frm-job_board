@@ -23,7 +23,7 @@ export default function Search({ onSearch }) {
         dark:shadow-gray-800
         items-center gap-4 mb-6
         md:min-w-[800px] flex flex-row ">
-      <h2 id="filters-heading" class="sr-only">Filters</h2>
+      <h2 id="filters-heading" className="sr-only">Filters</h2>
       <div className="input-wrapper relative w-full">
       <input
         type="text"

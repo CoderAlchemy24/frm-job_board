@@ -8,7 +8,7 @@ import Card from "./components/card";
 
 
 type Job = {
-  id: string | number;
+  id: number;
   company: string;
   logo: string;
   logoBackground: string;

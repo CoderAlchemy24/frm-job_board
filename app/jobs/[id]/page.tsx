@@ -116,7 +116,7 @@ export default async function JobDetails({
           </h3>
           <p className="text-[#6E8098] leading-relaxed">{job.requirements.content}</p>
           <ul className="mt-4 space-y-3 list-none">
-            {job.requirements.items.map((item, i) => (
+            {job.requirements.items.map((item, i )=> (
               <li key={i} className="flex gap-4 text-[#6E8098]">
                 <span className="text-[#5964E0] font-bold shrink-0">•</span>
                 {item}
