@@ -31,11 +31,11 @@ export default function Card({ job }: { job: Job }) {
   return (
     <div
       className="mx-auto my-5 mx-auto px-7 pl-5 pr-2 bg-white dark:bg-[#19202D] rounded-lg shadow-md 
-         w-[360px] h-[253px] flex flex-col justify-start items-start gap-4 md:max-w-[1040px] cursor-pointer hover:opacity-80 transition-opacity"
+         w-[360px] h-[253px] flex flex-col justify-start items-start gap-4 md:max-w-[1040px] "
       
     >
       <div className="relative -top-6 w-[50px] h-[50px] rounded-[16px] flex items-center justify-center" style={{ backgroundColor: job.logoBackground}}>
-        <Image src={job.logo.replace(/^\.\//,'/')} alt={`${job.company} logo`} width={50} height={50} className="m-4"  />
+        <Image src={job.logo.replace(/^\.\//,'/')} alt={`${job.company} logo`} width={50} height={50} className="m-5"  />
       </div>
       <div className="flex flex-col gap-2">
           <p className="text-magenta dark:text-[#6E8980]">{job.postedAt} * {job.contract}</p>
@@ -47,7 +47,7 @@ export default function Card({ job }: { job: Job }) {
             {job.location}
           </h3>
           <button type="button" onClick={() => router.push(`/jobs/${job.id}`)}
-       className="w-35 h-12 m-3 pr-4 block relative -right-42 bottom-15
+       className="w-35 h-12 m-3 pr-4 block relative -right-42 -top-60 rounded-md cursor-pointer
           border-1 border-[#5964E0] text-center text-white bg-[#5964E0] hover:bg-[#939BF4] transition-colors">
        Details
       </button>
