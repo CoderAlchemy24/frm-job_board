@@ -32,7 +32,7 @@ export default function Card({ job }: { job: Job }) {
     <div
       className="mx-auto my-5 mx-auto px-7 pl-5 pr-2 bg-white dark:bg-[#19202D] rounded-lg shadow-md 
          w-[360px] h-[253px] flex flex-col justify-start items-start gap-4 md:max-w-[1040px] cursor-pointer hover:opacity-80 transition-opacity"
-      onClick={() => router.push(`/jobs/${job.id}`)}
+      
     >
       <div className="relative -top-6 w-[50px] h-[50px] rounded-[16px] flex items-center justify-center" style={{ backgroundColor: job.logoBackground}}>
         <Image src={job.logo.replace(/^\.\//,'/')} alt={`${job.company} logo`} width={50} height={50} className="m-4"  />
@@ -46,6 +46,11 @@ export default function Card({ job }: { job: Job }) {
           <h3 className="text-14 font-bold text-[#5964E0] dark:text-[#5964E0] my-4 py-0">
             {job.location}
           </h3>
+          <button type="button" onClick={() => router.push(`/jobs/${job.id}`)}
+       className="w-35 h-12 m-3 pr-4 block relative -right-42 bottom-15
+          border-1 border-[#5964E0] text-center text-white bg-[#5964E0] hover:bg-[#939BF4] transition-colors">
+       Details
+      </button>
       </div>
       
     </div>
