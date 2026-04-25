@@ -77,7 +77,7 @@ export default async function JobDetails({
               <p className="text-[#6E8098]">{job.website}</p>
             </div>
             <a
-              href="_blank"
+              href={job.website}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-[#EEEFFC] dark:bg-[#303642] text-[#5964E0] font-bold rounded-lg hover:bg-[#C5C9F4] dark:hover:bg-[#505764] transition"
@@ -100,7 +100,7 @@ export default async function JobDetails({
               <p className="text-[#5964E0] font-bold mt-1">{job.location}</p>
             </div>
             <a
-              href="_blank"
+              href={job.apply}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-[#5964E0] text-white font-bold rounded-lg text-center hover:bg-[#939BF4] transition"
@@ -147,7 +147,7 @@ export default async function JobDetails({
             <p className="text-[#6E8098]">{job.company}</p>
           </div>
           <a
-            href="_blank"
+            href={job.apply}
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-[#5964E0] text-white font-bold rounded-lg text-center hover:bg-[#939BF4] transition"
