@@ -50,7 +50,7 @@ export default function Search({ onSearch }) {
           focus:outline-none focus:ring-2 focus:ring-magenta focus:ring-offset-2"
       />
       
-      <label htmlFor="checkbox1" className="hidden md:min-w-[160px] md:flex flex-row 
+      <label className="hidden md:min-w-[160px] md:flex flex-row 
            items-center 
          text-gray-900 dark:text-white">
 
@@ -61,13 +61,14 @@ export default function Search({ onSearch }) {
           onChange={(e) => setSearchTerm3(e.target.checked)}
           className="mr-2"
         />
-        Full Time Only
+        <span>Full Time Only</span>
       </label>
       <button type="button" className="sm:w-[64px] md:hidden h-[64px] px-5 py-5 bg-[#5964E0] 
           text-white rounded-lg dark:bg-[#5964E0] hover:cursor-pointer 
           transition-colors duration-300"
           onClick={() => onSearch(searchTerm1, searchTerm2, searchTerm3)}>
-          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z" fill="#FFFFFF" fillRule="nonzero"/></svg>
+          <span className="sr-only">Search</span>
+          <svg aria-hidden="true" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z" fill="#FFFFFF" fillRule="nonzero"/></svg>
       </button>
       <button type="button" className="hidden md:block w-[240px] h-[64px] px-5 py-5 bg-[#5964E0] 
           font-bold text-white
