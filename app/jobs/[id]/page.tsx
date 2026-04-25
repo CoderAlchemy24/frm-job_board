@@ -30,7 +30,7 @@ type Job = {
 export default async function JobDetails({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: number }>;
 }) {
   const { id } = await params;
   const job = (data as Job[]).find((j) => j.id === Number(id));

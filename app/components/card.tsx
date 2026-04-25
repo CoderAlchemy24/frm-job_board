@@ -38,7 +38,7 @@ export default function Card({ job }: { job: Job }) {
         <Image src={job.logo.replace(/^\.\//,'/')} alt={`${job.company} logo`} width={50} height={50} className="m-4"  />
       </div>
       <div className="flex flex-col gap-2">
-          <h1 className="text-magenta dark:text-[#6E8980]">{job.postedAt} * {job.contract}</h1>
+          <p className="text-magenta dark:text-[#6E8980]">{job.postedAt} * {job.contract}</p>
           <h2 className="text-2xl font-bold text-purple-700 dark:text-gray-200 pb-4 ">
             {job.position}
           </h2>
