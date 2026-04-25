@@ -39,9 +39,9 @@ export default function Card({ job }: { job: Job }) {
       </div>
       <div className="flex flex-col gap-2">
           <h1 className="text-magenta dark:text-[#6E8980]">{job.postedAt} * {job.contract}</h1>
-          <h3 className="text-2xl font-bold text-purple-700 dark:text-gray-200 pb-4 ">
+          <h2 className="text-2xl font-bold text-purple-700 dark:text-gray-200 pb-4 ">
             {job.position}
-          </h3>
+          </h2>
           <h2 className="text-magenta dark:text-[#6E8980] ">{job.company}</h2>
           <h3 className="text-14 font-bold text-[#5964E0] dark:text-[#5964E0] my-4 py-0">
             {job.location}

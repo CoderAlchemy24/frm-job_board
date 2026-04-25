@@ -17,11 +17,13 @@ export default function Search({ onSearch }) {
   }, [searchTerm1, searchTerm2, searchTerm3, onSearch]);
 
   return (
-    <div className="w-[80%] mx-auto relative -top-[80px] 
+    <section aria-labelledby="filters-heading"
+        className="w-[80%] mx-auto relative -top-[80px] 
         bg-white dark:bg-[#19202D] z-10 p-6 rounded-lg shadow-lg shadow-gray-100 
         dark:shadow-gray-800
         items-center gap-4 mb-6
         md:min-w-[800px] flex flex-row ">
+      <h2 id="filters-heading" class="sr-only">Filters</h2>
       <div className="input-wrapper relative w-full">
       <input
         type="text"
@@ -77,6 +79,6 @@ export default function Search({ onSearch }) {
           onClick={() => onSearch(searchTerm1, searchTerm2, searchTerm3)}>
             Search
           </button>
-    </div>
+     </section>
   );
 }

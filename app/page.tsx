@@ -64,7 +64,7 @@ export default function Home() {
 
     
   return (
-    <div className="w-full bg-[#F4F6F8] dark:bg-[#121721]">
+    <main className="w-full bg-[#F4F6F8] dark:bg-[#121721]">
       <Header />
       <Search onSearch={handleSearch} />
       <div className="w-[80%] sm:w-[92%] mx-auto p-3  
@@ -81,6 +81,6 @@ export default function Home() {
          Load More
          </button>
       </div>
-    </div>
+    </main>
   );
 }
