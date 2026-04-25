@@ -67,21 +67,21 @@ export default function Home() {
     <main className="w-full bg-[#F4F6F8] dark:bg-[#121721]">
       <Header />
       <Search onSearch={handleSearch} />
-      <div className="w-[80%] sm:w-[92%] mx-auto p-3  
+      <article className="w-[80%] sm:w-[92%] mx-auto p-3  
         flex flex-row flex-wrap gap-6 justify-center items-center">
         {
                 
         filteredJobs.slice(0,cardNum).map((job: Job) => (
           <Card key={job.id} job={job}  />
         ))}
-      </div>
-      <div className="w-full flex justify-center items-center h-16 m-0 bg-white dark:bg-[#19202D] ">
+      </article>
+      <article className="w-full flex justify-center items-center h-16 m-0 bg-white dark:bg-[#19202D] ">
          <button className="w-[144px] h-[44px] mx-auto mt-0  pt-0 pb-0 text-center hover:bg-[#939BF4] transition-colors
           cursor-pointer
           text-white bg-[#5964E0] rounded-lg" onClick ={() => setCardNum(cardNum + 12)}>
          Load More
          </button>
-      </div>
+      </article>
     </main>
   );
 }

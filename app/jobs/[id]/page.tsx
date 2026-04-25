@@ -37,28 +37,28 @@ export default async function JobDetails({
 
   if (!job) {
     return (
-      <div className="w-full">
+      <section className="w-full">
         <Header />
         <p className="text-center mt-10 text-magenta">404 Page not found.</p>
         
-      </div>
+      </section>
     );
   }
 
   return (
-    <div className="w-full bg-[#F4F6F8] dark:bg-[#121721] min-h-screen">
+    <section className="w-full bg-[#F4F6F8] dark:bg-[#121721] min-h-screen">
       <Header />
 
       {/* Company header card */}
-      <div className="max-w-[730px] mx-auto mt-8 px-4">
+      <main className="max-w-[730px] mx-auto mt-8 px-4">
         <Link
           href="/"
           className="inline-block ml-10 mb-6 text-[#6E8098] hover:text-[#19202D] dark:hover:text-white transition font-bold"
         >
           ← Back to Board
         </Link>
-        <div className="mx-10 bg-white dark:bg-[#19202D] rounded-lg flex flex-col md:flex-row overflow-hidden">
-          <div
+        <section className="mx-10 bg-white dark:bg-[#19202D] rounded-lg flex flex-col md:flex-row overflow-hidden">
+          <article
             className="flex items-center justify-center w-full md:w-[140px] h-[140px] md:h-auto shrink-0"
             style={{ backgroundColor: job.logoBackground }}
           >
@@ -68,12 +68,12 @@ export default async function JobDetails({
               width={60}
               height={60}
             />
-          </div>
-          <div className="flex flex-col md:flex-row items-center justify-between w-full p-8 gap-4">
+          </article>
+          <article className="flex flex-col md:flex-row items-center justify-between w-full p-8 gap-4">
             <div className="text-center md:text-left">
-              <h2 className="text-xl font-bold text-[#19202D] dark:text-white">
+              <h1 className="text-xl font-bold text-[#19202D] dark:text-white">
                 {job.company}
-              </h2>
+              </h1>
               <p className="text-[#6E8098]">{job.website}</p>
             </div>
             <a
@@ -84,12 +84,12 @@ export default async function JobDetails({
             >
               Company Site
             </a>
-          </div>
-        </div>
+          </article>
+        </section>
 
         {/* Job details card */}
-        <div className="mx-10 bg-white dark:bg-[#19202D] rounded-lg p-8 mt-6 mb-10">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <section className="mx-10 bg-white dark:bg-[#19202D] rounded-lg p-8 mt-6 mb-10">
+          <article className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <p className="text-[#6E8098]">
                 {job.postedAt} · {job.contract}
@@ -107,7 +107,7 @@ export default async function JobDetails({
             >
               Apply Now
             </a>
-          </div>
+          </article>
 
           <p className="text-[#6E8098] mt-8 leading-relaxed">{job.description}</p>
 
@@ -136,11 +136,11 @@ export default async function JobDetails({
               </li>
             ))}
           </ol>
-        </div>
-      </div>
+        </section>
+      </main>
 
       {/* Footer apply bar */}
-      <div className="sticky bottom-0 w-full bg-white dark:bg-[#19202D] py-4 px-18">
+      <article className="sticky bottom-0 w-full bg-white dark:bg-[#19202D] py-4 px-18">
         <div className="max-w-[730px] mx-auto px-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
           <div className="hidden md:block">
             <p className="font-bold text-[#19202D] dark:text-white">{job.position}</p>
@@ -155,7 +155,7 @@ export default async function JobDetails({
             Apply Now
           </a>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 }
